@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Pregnancy Tracker" class="bg-purple-600 text-white">
+        <NavigationButton visibility="collapsed" />
+    </ActionBar>
+    
+    <StackLayout class="p-4">
+        <Label text="Welcome to Pregnancy Tracker" class="text-2xl font-bold text-purple-600 text-center"/>
+        <Label text="Your journey starts here" class="text-lg text-gray-600 text-center mt-2"/>
+    </StackLayout>
+</Page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" rows="auto,auto" columns="*,*" class="mb-4">
+    <Button text="Track Symptoms" tap="{{ onTrackSymptoms }}" 
+        class="m-1 bg-purple-500 text-white rounded-lg"/>
+    <Button text="My Calendar" tap="{{ onViewCalendar }}" 
+        col="1" class="m-1 bg-purple-500 text-white rounded-lg"/>
+    <Button text="Baby Development" tap="{{ onBabyDevelopment }}" 
+        row="1" class="m-1 bg-purple-500 text-white rounded-lg"/>
+    <Button text="Resources" tap="{{ onViewResources }}" 
+        row="1" col="1" class="m-1 bg-purple-500 text-white rounded-lg"/>
+</GridLayout>

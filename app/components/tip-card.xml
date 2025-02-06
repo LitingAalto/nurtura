@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="bg-white rounded-lg p-4 mb-4 shadow">
+    <Label text="Today's Tip" class="text-lg font-bold text-purple-600 mb-2"/>
+    <Label text="{{ dailyTip }}" textWrap="true" class="text-gray-700"/>
+</StackLayout>

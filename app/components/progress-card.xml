@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" rows="auto" columns="*,*" class="mb-4 bg-white rounded-lg p-4 shadow">
+    <StackLayout col="0" class="text-center">
+        <Label text="{{ currentWeek }}" class="text-4xl font-bold text-purple-600"/>
+        <Label text="Current Week" class="text-sm text-gray-600"/>
+    </StackLayout>
+    <StackLayout col="1" class="text-center">
+        <Label text="{{ dueDate, 'MMM dd, yyyy' }}" class="text-xl text-purple-600"/>
+        <Label text="Due Date" class="text-sm text-gray-600"/>
+    </StackLayout>
+</GridLayout>
