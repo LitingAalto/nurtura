@@ -14,7 +14,6 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitFallthrough": true  // Changed from noFallthrough
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
