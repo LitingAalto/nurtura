@@ -53,10 +53,7 @@ const FeedingTimer: React.FC = () => {
       id: crypto.randomUUID(),
       timestamp: startTime || new Date(),
       type: 'Breastfeeding', // Use a value that matches the FeedingLog type
-      duration: {
-        left: duration.left,
-        right: duration.right
-      }
+      duration:  duration.left + duration.right,
     };
 
     addFeedingLog(feedingLog);
