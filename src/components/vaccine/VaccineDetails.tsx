@@ -6,7 +6,7 @@ interface VaccineDetailsProps {
   onSetAlarm: () => void;
 }
 
-const VaccineDetailsComponent: React.FC<VaccineDetailsProps> = ({ details, onSetAlarm }) => {
+const VaccineDetailsComponent: React.FC<VaccineDetailsProps> = ({ details }) => {
   return (
     <div className="space-y-6">
       <div className="bg-white p-4 rounded-lg">
