@@ -12,7 +12,7 @@ interface BreastfeedingTimerProps {
   onSave: () => void;
   onDelete: () => void;
   duration: number;
-  onDurationChange: (duration: number) => void;
+  setDuration: (duration: number) => void;
   startTime: Date | null;
   onTimeChange: (time: Date) => void;
   isManualMode: boolean;
@@ -33,7 +33,7 @@ const BreastfeedingTimer: React.FC<BreastfeedingTimerProps> = ({
   onSave,
   onDelete,
   duration,
-  onDurationChange,
+  setDuration,
   startTime,
   onTimeChange,
   isManualMode,
@@ -78,7 +78,7 @@ const BreastfeedingTimer: React.FC<BreastfeedingTimerProps> = ({
       {isManualMode ? (
         <ManualInput
           duration={duration} // Assign the duration prop
-          setDuration={onDurationChange} // Assign the onDurationChange function
+          setDuration={setDuration} // Assign the onDurationChange function
           startTime={startTime || new Date()} // Assign the startTime prop
           setStartTime={onTimeChange} // Assign the onTimeChange function
         />
@@ -87,7 +87,7 @@ const BreastfeedingTimer: React.FC<BreastfeedingTimerProps> = ({
           activeTimer={activeTimer} // Assign the activeTimer prop
           duration={duration} // Assign the duration prop
           onTimerToggle={handleTimerToggle} // Assign the handleTimerToggle function
-          onDurationChange={onDurationChange} // Assign the onDurationChange function
+          onDurationChange={setDuration} // Assign the onDurationChange function
         />
       )}
 
