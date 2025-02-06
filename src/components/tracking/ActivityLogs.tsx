@@ -39,17 +39,17 @@ const ActivityLogs: React.FC = () => {
     // Dummy fetch functions - replace with your actual API calls
     async function fetchFeedingLogs(): Promise<FeedingLog[]> {
         // Replace with your actual API call
-        return [{ id: '1', timestamp: new Date(), foodType: 'formula', amount: 120 }]; // Example data
+        return [{ id: '1', timestamp: new Date(), type: 'formula', amount: 120 }]; // Example data
     }
 
     async function fetchSleepLogs(): Promise<SleepLog[]> {
         // Replace with your actual API call
-        return [{ id: '1', startTime: new Date(), endTime: new Date() }]; // Example data
+        return [{ id: '1', startTime: new Date(), endTime: new Date(), duration: 3600, quality: 'good' }]; // Example data (duration in seconds)
     }
 
     async function fetchDiaperLogs(): Promise<DiaperLog[]> {
         // Replace with your actual API call
-        return [{ id: '1', timestamp: new Date(), type: 'pee' }]; // Example data
+        return [{ id: '1', timestamp: new Date(), type: 'Wet' }]; // Example data
     }
 
 
