@@ -2,24 +2,43 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useRecordsStore } from '../../store/recordsStore';
+// import { v4 as uuidv4 } from 'uuid';
 
 interface ReminderPanelProps {
   isOpen: boolean;
   onClose: () => void;
-  source?: string;
+  addReminder: (reminder: Reminder) => void;
 }
 
-const ReminderPanel: React.FC<ReminderPanelProps> = ({ isOpen, onClose, source = 'general' }) => {
+interface Reminder {
+  id: string;
+  title: string;
+  type: string;
+  time: Date;
+  timestamp: Date;
+  isActive: boolean;
+  repeat?: {
+    type: "daily" | "weekly" | "monthly";
+    days?: string[];
+  };
+}
+
+
+/*const ReminderPanel: React.FC<ReminderPanelProps> = ({ isOpen, onClose, source = 'general' }) => {
   const { addReminder } = useRecordsStore();
   const [selectedType, setSelectedType] = useState('same-day');
-  const [selectedTime, setSelectedTime] = useState(new Date());
+  const [selectedTime, setSelectedTime] = useState(new Date());*/
   // const [selectedDays, setSelectedDays] = useState<string[]>([]); // Removed unused variable
+const ReminderPanel: React.FC<ReminderPanelProps> = ({ isOpen, onClose, addReminder }) => {
+  const [title, setTitle] = useState('');
+  const [time, setTime] = useState(new Date());
+  const [reminderType, setReminderType] = useState<'none' | 'daily' | 'weekly' | 'monthly'>('none'); // Use a specific type
 
   if (!isOpen) return null;
 
   const handleSave = () => {
     const reminder = {
-      id: uuidv4(), // Generate a unique ID
+      // id: uuidv4(), // Generate a unique ID
       title: source === 'feeding' ? 'Feeding Time' : 'General Reminder',
       type: source,
       time: selectedTime,
