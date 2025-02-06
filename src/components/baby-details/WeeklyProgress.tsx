@@ -2,6 +2,7 @@ import React from 'react';
 
 interface WeeklyProgressProps {
   currentWeek: number;
+  dateRange: string; 
   onWeekChange?: (week: number) => void;
 }
 
