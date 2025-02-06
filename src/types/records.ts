@@ -16,7 +16,7 @@ export interface Reminder extends BaseRecord {
   type: string;
   time: Date;
   repeat?: {
-    type: 'daily' | 'weekly' | 'monthly';
+    type: "daily" | "weekly" | "monthly" | "once";
     days?: string[];
   };
   isActive: boolean;
