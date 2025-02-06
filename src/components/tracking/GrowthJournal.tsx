@@ -16,6 +16,7 @@ const GrowthJournal: React.FC = () => {
       title: newMilestoneTitle,
       description: newMilestoneDescription,
       date: new Date(), // Use current date
+      category: 'Physical', // Or 'Cognitive', 'Social', 'Language' - choose the appropriate category
     };
 
     addMilestone(newMilestone);
