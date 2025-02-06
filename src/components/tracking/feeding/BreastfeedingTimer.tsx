@@ -5,6 +5,8 @@ import ConfirmDialog from '../../common/ConfirmDialog';
 import ModeSwitchDialog from '../../common/ModeSwitchDialog';
 import ReminderIcon from '../../reminder/ReminderIcon'; // Import is fine
 
+const [duration, setDuration] = useState({ left: 0, right: 0 });
+
 interface BreastfeedingTimerProps {
   existingActivity: any; // Replace 'any' with the actual type
   onSave: () => void;
@@ -77,7 +79,7 @@ const BreastfeedingTimer: React.FC<BreastfeedingTimerProps> = ({
         <ManualInput
           duration={duration} // Assign the duration prop
           setDuration={onDurationChange} // Assign the onDurationChange function
-          startTime={startTime} // Assign the startTime prop
+          startTime={startTime || new Date()} // Assign the startTime prop
           setStartTime={onTimeChange} // Assign the onTimeChange function
         />
       ) : (
